@@ -6,7 +6,7 @@ from django.urls import path
 from .views import AccountListView,AccountDetailView,TransactionListView,TransactionDetailView
 urlpatterns = [
     path('view',AccountListView.as_view()),
-    path('details/<int:id>',AccountDetailView.as_view()),
+    path('details/<int:account_number>',AccountDetailView.as_view()),
     path('transaction/view',TransactionListView.as_view()),
-    path('transaction/details/<int:client_id>',TransactionDetailView.as_view()),
+    path('transaction/details/<int:transaction_id>',TransactionDetailView.as_view()),
 ]
